@@ -11,7 +11,14 @@ The program does the following:
     5.1. The initial value of the parameter is set to 0, and the final value is set to the number of characters in the string (its length).
     5.2. A series of cycles is performed.
       5.2.1. The code of the next character in the string is determined. It is converted to the number between 0 and 15.
+             The first case. The character is digit between 0 and 9.
              The formula used is: character code - character code "0" (or the number 48 is subtracted from the character code).
+             The second case. The character is letter between A and F.
+             The formula used is: character code - character code "A" + 10 
+             (or the number 65 is subtracted from the character code then the number 10 is added).
+             The third case. The character is letter between a and f.
+             The formula used is: character code - character code "a" + 10 
+             (or the number 97 is subtracted from the character code then the number 10 is added). 
              Moreover, the calculation starts from the end of the line.
       5.2.2. The resulting value is multiplied by a power of eight.
       5.2.3. The value obtained in the previous step is added to the decimal number variable.
